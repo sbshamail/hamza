@@ -16,8 +16,8 @@ const Home = () => {
       return { ...item, percentage: percentage };
     });
     return (
-      <div>
-        <div className="w-full bg-blue-700 text-white p-1">{item.title}</div>
+      <div className="border-4 mb-1 border-green-900">
+        <div className="w-full bg-green-900 text-white p-1 ">{item.title}</div>
         <SimpleTable data={item.data} columns={columns} />
       </div>
     );

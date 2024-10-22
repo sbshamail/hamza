@@ -19,7 +19,7 @@ export const pipe_pn16_data = [
   },
   {
     size: "50MM,4MTR",
-    price: 3706,
+    price: 3700,
     percentage: 0.0,
     discount: 3706,
   },
@@ -119,13 +119,102 @@ const secket = [
   { size: "63MM", price: 282, percentage: 0.0, discount: 282 },
 ];
 
+const under_ground = [
+  { size: "25MM", price: 978, percentage: 0, discount: 978 },
+];
+const reducer_tee = [
+  { size: "32X25 MM", price: 108, percentage: 0, discount: 108 },
+  { size: "40X25 MM", price: 170, percentage: 0, discount: 170 },
+  { size: "40X32 MM", price: 175, percentage: 0, discount: 175 },
+  { size: "50X25 MM", price: 315, percentage: 0, discount: 315 },
+  { size: "50X32 MM", price: 357, percentage: 0, discount: 357 },
+  { size: "50X40 MM", price: 370, percentage: 0, discount: 370 },
+  { size: "63X25 MM", price: 535, percentage: 0, discount: 535 },
+  { size: "63X32 MM", price: 568, percentage: 0, discount: 568 },
+  { size: "63X40 MM", price: 580, percentage: 0, discount: 580 },
+  { size: "63X50 MM", price: 632, percentage: 0, discount: 632 },
+];
+const reducer_socket = [
+  { size: "32X25 MM", price: 51, percentage: 0, discount: 51 },
+  { size: "40X25 MM", price: 66, percentage: 0, discount: 66 },
+  { size: "40X32 MM", price: 96, percentage: 0, discount: 96 },
+  { size: "50X25 MM", price: 72, percentage: 0, discount: 72 },
+  { size: "50X32 MM", price: 100, percentage: 0, discount: 100 },
+  { size: "50X40 MM", price: 107, percentage: 0, discount: 107 },
+  { size: "63X25 MM", price: 150, percentage: 0, discount: 150 },
+  { size: "63X32 MM", price: 155, percentage: 0, discount: 155 },
+  { size: "63X40 MM", price: 161, percentage: 0, discount: 161 },
+  { size: "63X50 MM", price: 166, percentage: 0, discount: 166 },
+];
+const mixed_elbow = [
+  { size: "25X1/2MM", price: 522, percentage: 0, discount: 522 },
+];
+const clumps = [
+  { size: "25MM", price: 16, percentage: 0, discount: 16 },
+  { size: "32MM", price: 21, percentage: 0, discount: 21 },
+  { size: "40MM", price: 35, percentage: 0, discount: 35 },
+];
+const union = [
+  { size: "25MM", price: 116, percentage: 0, discount: 116 },
+  { size: "32MM", price: 185, percentage: 0, discount: 185 },
+  { size: "40MM", price: 274, percentage: 0, discount: 274 },
+  { size: "50MM", price: 473, percentage: 0, discount: 473 },
+  { size: "63MM", price: 688, percentage: 0, discount: 688 },
+];
+const gate_valve = [
+  { size: "25MM", price: 759, percentage: 0, discount: 759 },
+  { size: "32MM", price: 1062, percentage: 0, discount: 1062 },
+  { size: "40MM", price: 2238, percentage: 0, discount: 2238 },
+  { size: "50MM", price: 3306, percentage: 0, discount: 3306 },
+  { size: "63MM", price: 4682, percentage: 0, discount: 4682 },
+];
+
+const reducer_elbow = [
+  { size: "32X25 MM", price: 94, percentage: 0, discount: 94 },
+  { size: "40X25 MM", price: 153, percentage: 0, discount: 153 },
+  { size: "40X32 MM", price: 166, percentage: 0, discount: 166 },
+  { size: "50X25 MM", price: 251, percentage: 0, discount: 251 },
+  { size: "50X32 MM", price: 298, percentage: 0, discount: 298 },
+  { size: "50X40 MM", price: 316, percentage: 0, discount: 316 },
+  { size: "63X25 MM", price: 536, percentage: 0, discount: 536 },
+  { size: "63X32 MM", price: 552, percentage: 0, discount: 552 },
+  { size: "63X40 MM", price: 572, percentage: 0, discount: 572 },
+  { size: "63X50 MM", price: 577, percentage: 0, discount: 577 },
+];
+const over_cross = [
+  { size: "25MM", price: 123, percentage: 0, discount: 123 },
+  { size: "32MM", price: 170, percentage: 0, discount: 170 },
+  { size: "40MM", price: 357, percentage: 0, discount: 357 },
+];
+const plug = [
+  { size: "25MM", price: 18, percentage: 0, discount: 18 },
+  { size: "32MM", price: 21, percentage: 0, discount: 21 },
+  { size: "40MM", price: 35, percentage: 0, discount: 35 },
+];
+const end_cap = [
+  { size: "25MM", price: 27, percentage: 0, discount: 18 },
+  { size: "32MM", price: 45, percentage: 0, discount: 21 },
+  { size: "40MM", price: 73, percentage: 0, discount: 35 },
+];
+
 export const pipeData = [
-  { title: "PIPE PN16 DATA", data: pipe_pn16_data },
-  { title: "PIPE PN20 DATA", data: pipe_pn20_data },
+  { title: "PIPE PN16 ", data: pipe_pn16_data },
+  { title: "PIPE PN20 ", data: pipe_pn20_data },
   { title: "ELBOW 90", data: elbow_90 },
   { title: "ELBOW 45", data: elbow_45 },
   { title: "TEE", data: tee },
   { title: "THREAD SOCKET FEMALE", data: thread_socket_female },
   { title: "THREAD TEE FEMALE", data: thread_tee_female },
   { title: "SECKET", data: secket },
+  { title: "UNDER GROUND", data: under_ground },
+  { title: "REDUCER TEE", data: reducer_tee },
+  { title: "REDUCER SOCKER", data: reducer_socket },
+  { title: "MIXED ELBOW", data: mixed_elbow },
+  { title: "CLUMPS", data: clumps },
+  { title: "UNION", data: union },
+  { title: "GATE VALVE", data: gate_valve },
+  { title: "REDUCER ELBOW", data: reducer_elbow },
+  { title: "OVER CROSS", data: over_cross },
+  { title: "PLUG", data: plug },
+  { title: "END CAP", data: end_cap },
 ];
