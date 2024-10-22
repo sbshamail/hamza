@@ -6,20 +6,18 @@ import {
 } from "@/components/hamailui/table/interface";
 import TextField from "@/components/hamailui/dataEntry/TextField";
 
-const Render = () => {
-  const [value, setValue] = useState(10);
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setValue(parseInt(`${e.target.value}`));
+const Render = ({percentage,setPercentage}:any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPercentage(parseInt(`${e.target.value}`));
   };
-  console.log(value);
   return (
-    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+    <div className="w-20 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
       <div className="flex justify-center items-center">
         <span className="font-bold">
           <TextField
             type="number"
             onChange={handleChange}
-            value={value}
+            value={percentage}
             min={0}
             max={100}
             className="p-0 underline bg-transparent w-12"
@@ -31,25 +29,31 @@ const Render = () => {
   );
 };
 
-const percentageRender = ({}: CustomRenderType) => <Render />;
-const priceValue = ({ cell, row }: CustomRenderType) => {
-  console.log(cell, row);
+
+const percentageRender = ({}: CustomRenderType,percentage:any,setPercentage:any) => <Render setPercentage={setPercentage} percentage={percentage}/>;
+const discountValue = ({ cell, row }: CustomRenderType,percentage:number) => {
   const originalPrice = Number(cell);
-  const discountPercentage = Number(row.percentage);
+  const discountPercentage = Number(percentage);
 
   const discountAmount = (originalPrice * discountPercentage) / 100;
-  const finalPrice = originalPrice - discountAmount;
-  return finalPrice;
+  const finalPrice = (originalPrice - discountAmount).toFixed(2);;
+  return <span className="w-20">{finalPrice}</span>
 };
-
-export const usePipeTableColumns: ColumnType[] = [
-  { accessor: "name", title: "Name", edit: true },
-  { title: "Percentage", render: percentageRender },
+export const usePipeTableColumns =(percentage:number,setPercentage:any)=> [
+  { accessor: "size", title: "Size", edit: true },
+  
   {
     accessor: "price",
     title: "Price",
     type: "currency",
     currency: "pkr",
-    render: priceValue,
+  },
+  { accessor:"percentage",title: "Percentage",render:(props:CustomRenderType)=>percentageRender(props,percentage,setPercentage)  },
+  {
+    accessor: "discount",
+    title: "Discount",
+    type: "currency",
+    currency: "pkr",
+    render:(props:CustomRenderType)=>discountValue(props,percentage)
   },
 ];
