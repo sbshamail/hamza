@@ -52,7 +52,7 @@ const BasicTable: FC<PropsType> = ({
                         columns.map((column: any, idx) => (
                           <td
                             key={idx}
-                            className="relative p-0 m-0 overflow-hidden px-5 whitespace-nowrap border text-center"
+                            className="relative p-0 m-0 overflow-hidden  whitespace-nowrap border text-center text-xs"
                           >
                             <span className="flex justify-center">
                               {column.edit ? (
