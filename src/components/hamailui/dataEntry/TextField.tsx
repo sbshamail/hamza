@@ -1,6 +1,6 @@
-"use client";
-import React, { ChangeEvent, KeyboardEvent, FC } from "react";
-import { twMerge } from "tailwind-merge";
+'use client';
+import React, { ChangeEvent, KeyboardEvent, FC } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 interface Props {
   label?: string;
@@ -23,7 +23,7 @@ interface Props {
   min?: number;
   minLength?: number;
   size?: string | any;
-  inputSize?: "0" | "1" | "2" | "3";
+  inputSize?: '0' | '1' | '2' | '3';
   rows?: number;
   id?: string;
 }
@@ -31,7 +31,7 @@ const TextField: FC<Props> = ({
   id,
   label,
   required,
-  type = "text",
+  type = 'text',
   name,
   placeholder,
   value,
@@ -39,7 +39,7 @@ const TextField: FC<Props> = ({
   onChange,
   onKeyDown,
   textarea = false,
-  className = "",
+  className = '',
   maxlength,
   max,
   min,
@@ -48,15 +48,15 @@ const TextField: FC<Props> = ({
   inputSize,
   rows = 4,
 }) => {
-  let InputSize = "py-2";
-  if (inputSize === "0") {
-    InputSize = "!py-0";
-  } else if (inputSize === "1") {
-    InputSize = "!py-1";
-  } else if (inputSize === "2") {
-    InputSize = "py-2";
-  } else if (inputSize === "3") {
-    InputSize = "py-3";
+  let InputSize = 'py-2';
+  if (inputSize === '0') {
+    InputSize = '!py-0';
+  } else if (inputSize === '1') {
+    InputSize = '!py-1';
+  } else if (inputSize === '2') {
+    InputSize = 'py-2';
+  } else if (inputSize === '3') {
+    InputSize = 'py-3';
   }
   return (
     <div className="flex items-start flex-col">

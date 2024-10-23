@@ -1,9 +1,9 @@
-"use client";
-import React, { ChangeEvent, FC, useState } from "react";
-import TextField from "../../dataEntry/TextField";
-import Iconify from "../../icon/Iconify";
-import { renderCell } from "../functions/RenderCell";
-import { ColumnType } from "../interface";
+'use client';
+import React, { ChangeEvent, FC, useState } from 'react';
+import TextField from '../../dataEntry/TextField';
+import Iconify from '../../icon/Iconify';
+import { renderCell } from '../functions/RenderCell';
+import { ColumnType } from '../interface';
 
 interface PropsType {
   column: ColumnType;

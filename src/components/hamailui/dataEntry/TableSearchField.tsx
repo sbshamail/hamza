@@ -1,5 +1,5 @@
-import React, { FC, KeyboardEvent } from "react";
-import Iconify from "../icon/Iconify";
+import React, { FC, KeyboardEvent } from 'react';
+import Iconify from '../icon/Iconify';
 
 interface PropsType {
   type?: string;
@@ -8,7 +8,7 @@ interface PropsType {
   value: string;
   setFilterEnter?: (enter: boolean) => void;
   onChange: (event: React.FormEvent<HTMLInputElement>) => void;
-  size?: "small";
+  size?: 'small';
 }
 const TableSearchField: FC<PropsType> = ({
   type,
@@ -25,7 +25,7 @@ const TableSearchField: FC<PropsType> = ({
     }
   };
   const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
-    if (event.key === "Enter") {
+    if (event.key === 'Enter') {
       handleFilterEnter();
     }
   };
@@ -33,12 +33,12 @@ const TableSearchField: FC<PropsType> = ({
     <div className="relative mt-1 ">
       <div className=" ">
         <input
-          type={type || "text"}
-          placeholder={placeholder || "Search..."}
+          type={type || 'text'}
+          placeholder={placeholder || 'Search...'}
           name={name}
           value={value}
           className={`${
-            size === "small" ? "w-32" : "px-2  p-1"
+            size === 'small' ? 'w-32' : 'px-2  p-1'
           } pl-8 border-2 leading-tight rounded-xl border-blue-600 shadow-sm sm:text-sm  focus:ring-blue-400 focus:border-blue-400`}
           onChange={onChange}
           onKeyDown={handleKeyDown}
@@ -51,7 +51,7 @@ const TableSearchField: FC<PropsType> = ({
       >
         <Iconify
           icon="teenyicons:search-outline"
-          fontSize={`${size === "small" ? "1em" : "1.5em"}`}
+          fontSize={`${size === 'small' ? '1em' : '1.5em'}`}
         />
       </button>
     </div>

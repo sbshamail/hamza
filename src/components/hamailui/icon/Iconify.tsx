@@ -1,9 +1,9 @@
-import React, { FC } from "react";
-import { Icon, IconProps } from "@iconify/react";
+import React, { FC } from 'react';
+import { Icon, IconProps } from '@iconify/react';
 
 interface PropsType extends IconProps {
   icon: string;
-  className?: React.ComponentProps<"div">["className"];
+  className?: React.ComponentProps<'div'>['className'];
   fontSize?: string;
 }
 const Iconify: FC<PropsType> = ({ icon, className, ...rest }) => {

@@ -1,7 +1,7 @@
-import React, { FC } from "react";
-import { renderCell } from "../functions/RenderCell";
-import { ColumnType } from "../interface";
-import CellEdit from "../common/CellEdit";
+import React, { FC } from 'react';
+import { renderCell } from '../functions/RenderCell';
+import { ColumnType } from '../interface';
+import CellEdit from '../common/CellEdit';
 
 interface PropsType {
   columns: ColumnType[];
@@ -15,7 +15,7 @@ const BasicTable: FC<PropsType> = ({
   columns,
   isLoading = false,
   data,
-  rowId = "id",
+  rowId = 'id',
   setSelectedRows,
   updateCell,
 }) => {
@@ -52,7 +52,7 @@ const BasicTable: FC<PropsType> = ({
                         columns.map((column: any, idx) => (
                           <td
                             key={idx}
-                            className="relative p-0 m-0 overflow-hidden  whitespace-nowrap border text-center text-xs"
+                            className={`relative p-0 m-0 overflow-hidden  whitespace-nowrap border text-center text-xs ${column.className}`}
                           >
                             <span className="flex justify-center">
                               {column.edit ? (

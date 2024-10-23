@@ -1,5 +1,5 @@
-import React from "react";
-import { currencyFormatter, dateFormat } from "./utility";
+import React from 'react';
+import { currencyFormatter, dateFormat } from './utility';
 
 interface CustomRenderType {
   row: any; // The entire row item
@@ -11,7 +11,7 @@ interface CustomRenderType {
 interface ColumnType {
   accessor?: string; // Path to the property in item
   render?: (props: CustomRenderType) => React.ReactNode; // Custom render function
-  type?: "date" | "currency" | "chip"; // Types for handling different formats
+  type?: 'date' | 'currency' | 'chip'; // Types for handling different formats
   currency?: string; // Currency type (if applicable)
   format?: string; // Formatting options for currency
 }
@@ -25,11 +25,11 @@ export const renderCell = (
   data: Record<string, any>[] // Array of all data items
 ) => {
   // Access nested properties using a function
-  const accessors = column?.accessor?.split(".");
+  const accessors = column?.accessor?.split('.');
   let value: string | number | Record<string, any> | null = item;
 
   accessors?.forEach((accessor) => {
-    if (value && typeof value === "object" && value.hasOwnProperty(accessor)) {
+    if (value && typeof value === 'object' && value.hasOwnProperty(accessor)) {
       value = value[accessor];
     } else {
       value = null;
@@ -37,7 +37,7 @@ export const renderCell = (
   });
   // Check if the final value is still an object, which should be handled specially
   if (
-    typeof value === "object" &&
+    typeof value === 'object' &&
     value !== null &&
     !Array.isArray(value) &&
     !React.isValidElement(value)
@@ -48,7 +48,7 @@ export const renderCell = (
   }
 
   // Check if the column has a render function
-  if (column?.render && typeof column.render === "function") {
+  if (column?.render && typeof column.render === 'function') {
     const renderResult = column?.render({
       row: item,
       index,
@@ -62,7 +62,7 @@ export const renderCell = (
     }
 
     // Handle common render function return types
-    if (typeof renderResult === "string" || typeof renderResult === "number") {
+    if (typeof renderResult === 'string' || typeof renderResult === 'number') {
       return renderResult;
     }
 
@@ -76,15 +76,15 @@ export const renderCell = (
   if (value === null || value === undefined) {
     return <span>‎ </span>;
   }
-  if (typeof value === "string" || typeof value === "number") {
+  if (typeof value === 'string' || typeof value === 'number') {
     switch (column.type) {
-      case "date":
+      case 'date':
         // If value is a string, ensure it's treated as a string for date formatting
         return dateFormat(value as string);
-      case "currency":
+      case 'currency':
         // If value is a number, safely cast it; if it's a string, try parsing it
         const numericValue =
-          typeof value === "number" ? value : parseFloat(value);
+          typeof value === 'number' ? value : parseFloat(value);
 
         // Ensure the parsed value is a valid number before passing to currencyFormatter
         if (!isNaN(numericValue)) {

@@ -1,23 +1,23 @@
-import dayjs from "dayjs";
+import dayjs from 'dayjs';
 
-export const dateFormat = (value: string, format: string = "yearly") => {
-  if (format === "hourly") {
-    return value ? dayjs(value).format("DD-MM-YYYY hh:mm") : null;
+export const dateFormat = (value: string, format: string = 'yearly') => {
+  if (format === 'hourly') {
+    return value ? dayjs(value).format('DD-MM-YYYY hh:mm') : null;
   }
-  return value && dayjs(value).format("DD-MM-YYYY");
+  return value && dayjs(value).format('DD-MM-YYYY');
 };
 
 export const currencyFormatter = (
   value: number,
   currency: string | null = null,
-  format: string = "en-PK"
+  format: string = 'en-PK'
 ): string => {
   const options: Intl.NumberFormatOptions = {
     minimumFractionDigits: 0,
   };
 
   if (currency) {
-    options.style = "currency";
+    options.style = 'currency';
     options.currency = currency;
   }
 
@@ -29,7 +29,7 @@ export const currencyFormatter = (
   // If the value is negative, adjust the formatting
   if (value < 0) {
     if (currency) {
-      formattedValue = formattedValue.replace(/^(\D+)/, "$1-");
+      formattedValue = formattedValue.replace(/^(\D+)/, '$1-');
     } else {
       formattedValue = `-${formattedValue}`;
     }

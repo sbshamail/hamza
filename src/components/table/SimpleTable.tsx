@@ -1,7 +1,7 @@
-"use client";
-import React, { FC, useState } from "react";
-import BasicTable from "@/components/hamailui/table/basic";
-import { ColumnType } from "../hamailui/table/interface";
+'use client';
+import React, { FC, useState } from 'react';
+import BasicTable from '@/components/hamailui/table/basic';
+import { ColumnType } from '../hamailui/table/interface';
 
 interface PropsType {
   data: any[];
