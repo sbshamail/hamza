@@ -19,6 +19,7 @@ const SimpleTable: FC<PropsType> = ({ data, columns }) => {
     <div>
       <BasicTable
         data={tableData}
+        isLoading={tableData && tableData.length > 0 ? false : true}
         columns={columns}
         rowId="name"
         updateCell={updateCell}

@@ -4,10 +4,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 const Navbar = () => {
   const pathname = usePathname();
-  const navbutton = (title: string, link: string) => (
+  const navbutton = (title: string, link: string, color: string) => (
     <Link href={link}>
       <button
-        className={`px-2 rounded bg-green-900 text-white ${
+        className={`px-2 rounded bg-${color}-900 text-white ${
           pathname === link ? 'opacity-100' : 'opacity-90 text-white/80'
         }  hover:opacity-100 `}
       >
@@ -19,8 +19,8 @@ const Navbar = () => {
     <div>
       <nav className="flex items-center justify-between  text-xs bg-gray-800 p-2 mb-2">
         <div className="flex space-x-2">
-          {navbutton('PRPC', '/')}
-          {navbutton('U-PVC', '/upvc')}
+          {navbutton('PRPC', '/', 'green')}
+          {navbutton('U-PVC', '/upvc', 'blue')}
         </div>
         <h1 className="font-semibold text-white  tracking-tight">
           Hamza Electric & Hardware Rate List

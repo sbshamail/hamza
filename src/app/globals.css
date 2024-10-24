@@ -36,3 +36,8 @@ body {
 .type-number-none {
   -moz-appearance: textfield; /* Hide the spinner in Firefox */
 }
+body {
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
