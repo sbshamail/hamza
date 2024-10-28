@@ -32,7 +32,7 @@ const PricePercentageScreen: FC<PropsType> = ({
     });
     return (
       <div key={item.title} className={`border-4 mb-1  ${borderColor}`}>
-        <div className={`w-full ${bgColor} text-white p-1 uppercase`}>
+        <div className={`w-full ${bgColor} text-white text-sm px-1 uppercase`}>
           {item.title}
         </div>
         <SimpleTable
