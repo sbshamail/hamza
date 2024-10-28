@@ -26,7 +26,7 @@ const BasicTable: FC<PropsType> = ({
         <div className={``}>
           {/* <!-- Table --> */}
           <div>
-            <table className="table-auto w-full border-collapse border-none ">
+            <table className="table-auto w-full border-collapse border-none  bge-[url('/img/img.png')]">
               {/* Table header */}
               <thead className="text-[13px]">
                 <tr className="z-10 sticky top-0 ">

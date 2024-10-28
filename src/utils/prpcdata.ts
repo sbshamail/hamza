@@ -70,17 +70,82 @@ const tee = [
   { size: '50MM', price: 255 },
   { size: '63MM', price: 491 },
 ];
+export const threadElbowFemale = [
+  {
+    size: '25 X 1/2',
+    price: 171,
+  },
+  {
+    size: '25 X 3/4',
+    price: 211,
+  },
+  {
+    size: '32 X 1/2',
+    price: 307,
+  },
+  {
+    size: '32 X 3/4',
+    price: 338,
+  },
+  {
+    size: '32 X 1"',
+    price: 469,
+  },
+  {
+    size: '40 X 1"',
+    price: 641,
+  },
+  {
+    size: '40 x 1/4',
+    price: 674,
+  },
+  {
+    size: '50 x 1/2',
+    price: 1340,
+  },
+  {
+    size: '63 x 2"',
+    price: 2148,
+  },
+];
 
 const thread_socket_female = [
-  { size: '25 X 1/2', price: 171 },
-  { size: '25 X 3/4', price: 211 },
-  { size: '32 X 1/2', price: 307 },
-  { size: '32 X 3/4', price: 338 },
-  { size: '32 X 1"', price: 469 },
-  { size: '40 X 1"', price: 641 },
-  { size: '40 x 1/4', price: 674 },
-  { size: '50 x 1/2', price: 1340 },
-  { size: '63 x 2"', price: 2148 },
+  {
+    size: '25 X 1/2',
+    price: 160,
+  },
+  {
+    size: '25 X 3/4',
+    price: 203,
+  },
+  {
+    size: '32 X 1/2',
+    price: 297,
+  },
+  {
+    size: '32 X 3/4',
+    price: 322,
+  },
+  {
+    size: '32 X 1"',
+    price: 437,
+  },
+  {
+    size: '40 X 1"',
+    price: 620,
+  },
+  {
+    size: '40 x 1/4',
+    price: 633,
+  },
+  {
+    size: '50 x 1/2',
+    price: 1055,
+  },
+  {
+    size: '63 x 2"',
+    price: 1801,
+  },
 ];
 const thread_tee_female = [
   { size: '25 X 1/2', price: 200 },
@@ -181,6 +246,7 @@ export const prpcData = [
   { title: 'ELBOW 90', data: elbow_90 },
   { title: 'ELBOW 45', data: elbow_45 },
   { title: 'TEE', data: tee },
+  { title: 'Thread Elbow Female', data: threadElbowFemale },
   { title: 'THREAD SOCKET FEMALE', data: thread_socket_female },
   { title: 'THREAD TEE FEMALE', data: thread_tee_female },
   { title: 'SECKET', data: secket },

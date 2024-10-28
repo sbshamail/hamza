@@ -10,7 +10,11 @@ interface PropsType {
   title: string;
   color: string;
 }
-const PricePercentageScreen: FC<PropsType> = ({ tableData, title, color }) => {
+const PricePercentageScreen: FC<PropsType> = ({
+  tableData,
+  title,
+  color = 'green',
+}) => {
   const [percentage, setPercentage] = useState<number>(10);
   const [data, setData] = useState(tableData);
   const columns: any = usePipeTableColumns(percentage, setPercentage);
@@ -20,7 +24,7 @@ const PricePercentageScreen: FC<PropsType> = ({ tableData, title, color }) => {
       return { ...item, percentage: percentage };
     });
     return (
-      <div className={`border-4 mb-1 border-${color}-900`}>
+      <div key={item.title} className={`border-4 mb-1 border-${color}-900`}>
         <div className={`w-full bg-${color}-900 text-white p-1 uppercase`}>
           {item.title}
         </div>
