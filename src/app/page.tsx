@@ -8,7 +8,12 @@ const page = () => {
   return (
     <div>
       <Navbar />
-      <PricePercentageScreen tableData={prpcData} title="PRPC" color="green" />
+      <PricePercentageScreen
+        tableData={prpcData}
+        title="PRPC"
+        borderColor="border-green-900"
+        bgColor="bg-green-900"
+      />
     </div>
   );
 };

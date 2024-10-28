@@ -1,6 +1,6 @@
 'use client';
 
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { usePipeTableColumns } from '../table/tableColumns/pipeTableColumns';
 import SimpleTable from '../table/SimpleTable';
 import TextField from '../hamailui/dataEntry/TextField';
@@ -9,12 +9,14 @@ import { ClassNameTypes } from '@/utils/interfaces/commonTypes';
 interface PropsType {
   tableData: any[];
   title: string;
-  color: string;
+  borderColor: string;
+  bgColor: string;
 }
 const PricePercentageScreen: FC<PropsType> = ({
   tableData,
   title,
-  color = 'green',
+  borderColor = 'border-green-900',
+  bgColor = 'border-green-900',
 }) => {
   const [percentage, setPercentage] = useState<number>(10);
   const [data, setData] = useState(tableData);
@@ -29,8 +31,8 @@ const PricePercentageScreen: FC<PropsType> = ({
       return { ...item, percentage: percentage };
     });
     return (
-      <div key={item.title} className={`border-4 mb-1 border-${color}-900`}>
-        <div className={`w-full bg-${color}-900 text-white p-1 uppercase`}>
+      <div key={item.title} className={`border-4 mb-1  ${borderColor}`}>
+        <div className={`w-full ${bgColor} text-white p-1 uppercase`}>
           {item.title}
         </div>
         <SimpleTable
@@ -70,7 +72,11 @@ const PricePercentageScreen: FC<PropsType> = ({
           {title}
         </h1>
       </div>
-      {data.map((item: any) => showTable(item))}
+      {data.length > 0 ? (
+        data.map((item: any) => showTable(item))
+      ) : (
+        <h2>Loading ...</h2>
+      )}
     </div>
   );
 };

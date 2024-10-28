@@ -239,26 +239,107 @@ const end_cap = [
   { size: '32MM', price: 45 },
   { size: '40MM', price: 73 },
 ];
-
+const tablebgClass = (bgImage: string) =>
+  `${bgImage} bg-no-repeat bg-contain opacity-40`;
 export const prpcData = [
-  { title: 'PIPE PN16 ', data: pipe_pn16_data },
-  { title: 'PIPE PN20 ', data: pipe_pn20_data },
-  { title: 'ELBOW 90', data: elbow_90 },
-  { title: 'ELBOW 45', data: elbow_45 },
-  { title: 'TEE', data: tee },
-  { title: 'Thread Elbow Female', data: threadElbowFemale },
-  { title: 'THREAD SOCKET FEMALE', data: thread_socket_female },
-  { title: 'THREAD TEE FEMALE', data: thread_tee_female },
-  { title: 'SECKET', data: secket },
-  { title: 'UNDER GROUND', data: under_ground },
-  { title: 'REDUCER TEE', data: reducer_tee },
-  { title: 'REDUCER SOCKER', data: reducer_socket },
-  { title: 'MIXED ELBOW', data: mixed_elbow },
-  { title: 'CLUMPS', data: clumps },
-  { title: 'UNION', data: union },
-  { title: 'GATE VALVE', data: gate_valve },
-  { title: 'REDUCER ELBOW', data: reducer_elbow },
-  { title: 'OVER CROSS', data: over_cross },
-  { title: 'PLUG', data: plug },
-  { title: 'END CAP', data: end_cap },
+  {
+    title: 'PIPE PN16 ',
+    data: pipe_pn16_data,
+    tablebgClass: tablebgClass("bg-[url('/prpc/pn16.png')]"),
+  },
+  {
+    title: 'PIPE PN20 ',
+    data: pipe_pn20_data,
+    tablebgClass: tablebgClass("bg-[url('/prpc/pn20.png')]"),
+  },
+  {
+    title: 'ELBOW 90',
+    data: elbow_90,
+    tablebgClass: tablebgClass("bg-[url('/prpc/elbow90.png')]"),
+  },
+  {
+    title: 'ELBOW 45',
+    data: elbow_45,
+    tablebgClass: tablebgClass("bg-[url('/prpc/elbow45.png')]"),
+  },
+  {
+    title: 'TEE',
+    data: tee,
+    tablebgClass: tablebgClass("bg-[url('/prpc/tee.png')]"),
+  },
+  {
+    title: 'Thread Elbow Female',
+    data: threadElbowFemale,
+    tablebgClass: tablebgClass("bg-[url('/prpc/elbowfemale.png')]"),
+  },
+  {
+    title: 'THREAD SOCKET FEMALE',
+    data: thread_socket_female,
+    tablebgClass: tablebgClass("bg-[url('/prpc/socketfemale.png')]"),
+  },
+  {
+    title: 'THREAD TEE FEMALE',
+    data: thread_tee_female,
+    tablebgClass: tablebgClass("bg-[url('/prpc/teefemale.png')]"),
+  },
+  {
+    title: 'SECKET',
+    data: secket,
+    tablebgClass: tablebgClass("bg-[url('/prpc/secket.png')]"),
+  },
+  {
+    title: 'UNDER GROUND',
+    data: under_ground,
+    tablebgClass: tablebgClass("bg-[url('/prpc/underground.png')]"),
+  },
+  {
+    title: 'REDUCER TEE',
+    data: reducer_tee,
+    tablebgClass: tablebgClass("bg-[url('/prpc/reducertee.png')]"),
+  },
+  {
+    title: 'REDUCER SOCKER',
+    data: reducer_socket,
+    tablebgClass: tablebgClass("bg-[url('/prpc/reducersocket.png')]"),
+  },
+  {
+    title: 'MIXED ELBOW',
+    data: mixed_elbow,
+    tablebgClass: tablebgClass("bg-[url('/prpc/mixerelbow.png')]"),
+  },
+  {
+    title: 'CLUMPS',
+    data: clumps,
+    tablebgClass: tablebgClass("bg-[url('/prpc/clumps.png')]"),
+  },
+  {
+    title: 'UNION',
+    data: union,
+    tablebgClass: tablebgClass("bg-[url('/prpc/union.png')]"),
+  },
+  {
+    title: 'GATE VALVE',
+    data: gate_valve,
+    tablebgClass: tablebgClass("bg-[url('/prpc/gatevalve.png')]"),
+  },
+  {
+    title: 'REDUCER ELBOW',
+    data: reducer_elbow,
+    tablebgClass: tablebgClass("bg-[url('/prpc/reducerelbow.png')]"),
+  },
+  {
+    title: 'OVER CROSS',
+    data: over_cross,
+    tablebgClass: tablebgClass("bg-[url('/prpc/overcross.png')]"),
+  },
+  {
+    title: 'PLUG',
+    data: plug,
+    tablebgClass: tablebgClass("bg-[url('/prpc/plug.png')]"),
+  },
+  {
+    title: 'END CAP',
+    data: end_cap,
+    tablebgClass: tablebgClass("bg-[url('/prpc/endcap.png')]"),
+  },
 ];

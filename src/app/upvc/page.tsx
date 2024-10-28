@@ -6,7 +6,12 @@ const page = () => {
   return (
     <div>
       <Navbar />
-      <PricePercentageScreen tableData={upvcData} title="UPVC" color="blue" />
+      <PricePercentageScreen
+        tableData={upvcData}
+        title="UPVC"
+        borderColor="border-blue-900"
+        bgColor="bg-blue-900"
+      />
     </div>
   );
 };
