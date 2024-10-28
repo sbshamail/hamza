@@ -4,6 +4,7 @@ import React, { FC, useState } from 'react';
 import { usePipeTableColumns } from '../table/tableColumns/pipeTableColumns';
 import SimpleTable from '../table/SimpleTable';
 import TextField from '../hamailui/dataEntry/TextField';
+import { ClassNameTypes } from '@/utils/interfaces/commonTypes';
 
 interface PropsType {
   tableData: any[];
@@ -19,7 +20,11 @@ const PricePercentageScreen: FC<PropsType> = ({
   const [data, setData] = useState(tableData);
   const columns: any = usePipeTableColumns(percentage, setPercentage);
 
-  const showTable = (item: { title: string; data: [] }) => {
+  const showTable = (item: {
+    title: string;
+    data: [];
+    tablebgClass?: React.ComponentProps<'div'>['className'];
+  }) => {
     item.data.map((item: any) => {
       return { ...item, percentage: percentage };
     });
@@ -28,7 +33,11 @@ const PricePercentageScreen: FC<PropsType> = ({
         <div className={`w-full bg-${color}-900 text-white p-1 uppercase`}>
           {item.title}
         </div>
-        <SimpleTable data={item.data} columns={columns} />
+        <SimpleTable
+          data={item.data}
+          columns={columns}
+          tablebgClass={item.tablebgClass}
+        />
       </div>
     );
   };

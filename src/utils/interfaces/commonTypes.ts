@@ -1,8 +1,4 @@
 import React from 'react';
 
-export type ChildrenTypes = {
-  children: React.ReactNode;
-};
-export type ClassNameTypes = {
-  className?: React.ComponentProps<'div'>['className'];
-};
+export type ChildrenTypes = React.ReactNode;
+export type ClassNameTypes = React.ComponentProps<'div'>['className'];

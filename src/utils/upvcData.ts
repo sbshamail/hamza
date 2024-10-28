@@ -1,3 +1,5 @@
+import { ClassNameTypes } from './interfaces/commonTypes';
+
 const elbow90 = [
   { size: '1.5"', price: 174 },
   { size: '2"', price: 197 },
@@ -182,36 +184,162 @@ const crossyee = [
   { size: '3"', price: 982 },
   { size: '4"', price: 1652 },
 ];
-
-export const upvcData = [
-  { title: 'elbow 90 ', data: elbow90 },
-  { title: 'tee ', data: tee },
-  { title: 'yee', data: yee },
-  { title: 'ELBOW 45', data: elbow45 },
-  { title: 'Plug TEE', data: plugTee },
-  { title: 'bend 90', data: bend90 },
-  { title: 'p trap Single', data: ptrapSingle },
-  { title: 'plug Elbow', data: plugElbow },
-  { title: 'p Trap Double', data: pTrapDouble },
-  { title: 's Tee', data: sTee },
-  { title: 'main Hole Box Line', data: mainHoleBoxLine },
-  { title: 'main Hole Box', data: mainHoleBox },
-  { title: 'multi floor trap', data: multiFloorTrap },
-  { title: 'Main Hole Cover', data: mainHoleCover },
-  { title: 'MF Elbow', data: mfElbow },
-  { title: 'MF Tee', data: mfTee },
-  { title: 'Socket', data: socket },
-  { title: 'bush', data: bush },
-  { title: 'offset', data: offset },
-  { title: 'endcap', data: endcap },
-  { title: 'cleanout', data: cleanout },
-  { title: 'Side Socket', data: sideSocket },
-  { title: 'Wall Socket', data: wallSocket },
-  { title: 'Cowel', data: cowel },
-  { title: 'Cross Tee', data: crosstee },
-  { title: 'Reducer Socket', data: reducerSocket },
-  { title: 'Screw Cup', data: screwCup },
-  { title: 'Main Hole Cover Ring', data: mainHoleCoverRing },
-  { title: 'Union', data: union },
-  { title: 'Cross Yee', data: crossyee },
+interface tableDataType {
+  title: string;
+  data: any[];
+  tablebgClass?: React.ComponentProps<'div'>['className'];
+}
+const tablebgClass = (bgImage: string) =>
+  `${bgImage} bg-no-repeat bg-contain opacity-40`;
+export const upvcData: tableDataType[] = [
+  {
+    title: 'elbow 90 ',
+    data: elbow90,
+    tablebgClass: tablebgClass("bg-[url('/upvc/elbow90.png')]"),
+  },
+  {
+    title: 'tee ',
+    data: tee,
+    tablebgClass: tablebgClass("bg-[url('/upvc/tee.png')]"),
+  },
+  {
+    title: 'yee',
+    data: yee,
+    tablebgClass: tablebgClass("bg-[url('/upvc/yee.png')]"),
+  },
+  {
+    title: 'ELBOW 45',
+    data: elbow45,
+    tablebgClass: tablebgClass("bg-[url('/upvc/elbow45.png')]"),
+  },
+  {
+    title: 'Plug TEE',
+    data: plugTee,
+    tablebgClass: tablebgClass("bg-[url('/upvc/plugtee.png')]"),
+  },
+  {
+    title: 'bend 90',
+    data: bend90,
+    tablebgClass: tablebgClass("bg-[url('/upvc/bend90.png')]"),
+  },
+  {
+    title: 'p trap Single',
+    data: ptrapSingle,
+    tablebgClass: tablebgClass("bg-[url('/upvc/ptrapsingle.png')]"),
+  },
+  {
+    title: 'plug Elbow',
+    data: plugElbow,
+    tablebgClass: tablebgClass("bg-[url('/upvc/plugelbow.png')]"),
+  },
+  {
+    title: 'p Trap Double',
+    data: pTrapDouble,
+    tablebgClass: tablebgClass("bg-[url('/upvc/ptrapdouble.png')]"),
+  },
+  {
+    title: 's Tee',
+    data: sTee,
+    tablebgClass: tablebgClass("bg-[url('/upvc/stee.png')]"),
+  },
+  {
+    title: 'main Hole Box Line',
+    data: mainHoleBoxLine,
+    tablebgClass: tablebgClass("bg-[url('/upvc/mailholeboxline.png')]"),
+  },
+  {
+    title: 'main Hole Box',
+    data: mainHoleBox,
+    tablebgClass: tablebgClass("bg-[url('/upvc/mainholebox.png')]"),
+  },
+  {
+    title: 'multi floor trap',
+    data: multiFloorTrap,
+    tablebgClass: tablebgClass("bg-[url('/upvc/multiFloorTrap.png')]"),
+  },
+  {
+    title: 'Main Hole Cover',
+    data: mainHoleCover,
+    tablebgClass: tablebgClass("bg-[url('/upvc/mainholecover.png')]"),
+  },
+  {
+    title: 'MF Elbow',
+    data: mfElbow,
+    tablebgClass: tablebgClass("bg-[url('/upvc/mfelbow.png')]"),
+  },
+  {
+    title: 'MF Tee',
+    data: mfTee,
+    tablebgClass: tablebgClass("bg-[url('/upvc/mftee.png')]"),
+  },
+  {
+    title: 'Socket',
+    data: socket,
+    tablebgClass: tablebgClass("bg-[url('/upvc/socket.png')]"),
+  },
+  {
+    title: 'bush',
+    data: bush,
+    tablebgClass: tablebgClass("bg-[url('/upvc/bush.png')]"),
+  },
+  {
+    title: 'offset',
+    data: offset,
+    tablebgClass: tablebgClass("bg-[url('/upvc/offset.png')]"),
+  },
+  {
+    title: 'endcap',
+    data: endcap,
+    tablebgClass: tablebgClass("bg-[url('/upvc/endcap.png')]"),
+  },
+  {
+    title: 'cleanout',
+    data: cleanout,
+    tablebgClass: tablebgClass("bg-[url('/upvc/cleanout.png')]"),
+  },
+  {
+    title: 'Side Socket',
+    data: sideSocket,
+    tablebgClass: tablebgClass("bg-[url('/upvc/sidesocket.png')]"),
+  },
+  {
+    title: 'Wall Socket',
+    data: wallSocket,
+    tablebgClass: tablebgClass("bg-[url('/upvc/wallsocket.png')]"),
+  },
+  {
+    title: 'Cowel',
+    data: cowel,
+    tablebgClass: tablebgClass("bg-[url('/upvc/cowel.png')]"),
+  },
+  {
+    title: 'Cross Tee',
+    data: crosstee,
+    tablebgClass: tablebgClass("bg-[url('/upvc/crosstee.png')]"),
+  },
+  {
+    title: 'Reducer Socket',
+    data: reducerSocket,
+    tablebgClass: tablebgClass("bg-[url('/upvc/reducersocket.png')]"),
+  },
+  {
+    title: 'Screw Cup',
+    data: screwCup,
+    tablebgClass: tablebgClass("bg-[url('/upvc/screwcap.png')]"),
+  },
+  {
+    title: 'Main Hole Cover Ring',
+    data: mainHoleCoverRing,
+    tablebgClass: tablebgClass("bg-[url('/upvc/mainholecoverring.png')]"),
+  },
+  {
+    title: 'Union',
+    data: union,
+    tablebgClass: tablebgClass("bg-[url('/upvc/union.png')]"),
+  },
+  {
+    title: 'Cross Yee',
+    data: crossyee,
+    tablebgClass: tablebgClass("bg-[url('/upvc/crossyee.png')]"),
+  },
 ];
